@@ -102,5 +102,5 @@ class AboutLists(Koan):
         self.assertEqual([1, 2, 'last'], list(queue))
         
         popped_value = queue.popleft()
-        self.assertEqual(__, popped_value)
-        self.assertEqual(__, list(queue))
+        self.assertEqual(1, popped_value)
+        self.assertEqual([2, 'last'], list(queue))
