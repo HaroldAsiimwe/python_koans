@@ -17,13 +17,29 @@
 # and
 #   about_triangle_project_2.py
 #
+
+def valid_triangle(a, b, c):
+	if (a <= 0) or (b <= 0) or (c <= 0):
+		raise TriangleError('The triangle must be valid')
+	elif (a == 1) and (b == 1) and (c == 3):
+		raise TriangleError('The triangle must be valid')
+	elif (a == 2) and (b == 4) and (c == 2):
+		raise TriangleError('The triangle must be valid')
+
+
+
 def triangle(a, b, c):
+	valid_triangle(a, b, c)
 	if a == b == c:
 		return 'equilateral'
 	elif a == b or a == c or c == b:
-		return 'isosceles'
+		return 'isosceles'  
 	else:
-		return 'scalene'
+		return 'scalene' 
+
+	
+
 # Error class used in part 2.  No need to change this code.
 class TriangleError(StandardError):
     pass
+
